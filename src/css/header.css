@@ -1,0 +1,48 @@
+.header {
+	padding: 0 24px;
+	width: 100%;
+	position: absolute;
+	top: 24px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.header__container {
+	padding: 12px 46px;
+	max-width: 1392px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	backdrop-filter: blur(60px);
+	background: rgba(108, 185, 171, 0.7);
+}
+
+.header__logo-link {
+	font-size: 0;
+}
+
+.header__nav {
+	margin: 0 auto;
+}
+
+.header__menu {
+	display: flex;
+	align-items: center;
+	gap: 50px;
+}
+
+/* .header__menu-item {
+}
+
+.header__menu-link {
+} */
+
+.header__cart-link {
+	width: 28px;
+	height: 28px;
+	padding: 10px 4px 3px;
+	background: url('../image/bag.svg') center/contain no-repeat;
+	color: var(--black);
+	font-size: 12px;
+	text-align: center;
+}

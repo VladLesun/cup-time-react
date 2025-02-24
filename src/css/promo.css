@@ -1,0 +1,25 @@
+.promo {
+	background-color: var(--aquamarine);
+}
+.promo__container {
+	padding: 210px 0 80px;
+	background: url('../image/promo-1440.png') right 113px bottom 0 no-repeat;
+}
+
+.promo__title {
+	margin-bottom: 60px;
+	max-width: 800px;
+	font-size: 88px;
+	line-height: 110%;
+	color: var(--white);
+}
+
+.promo__link {
+	display: inline-block;
+	border: 1px solid var(--white);
+	border-radius: 4px;
+	padding: 16px 24px;
+	font-size: 20px;
+	line-height: 124%;
+	color: var(--white);
+}
