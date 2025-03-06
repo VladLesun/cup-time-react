@@ -1,4 +1,8 @@
+import { Link } from 'react-router-dom';
+import { useProducts } from '../context/ProductContext';
+
 const Footer = () => {
+	const { categories } = useProducts();
 	return (
 		<footer className='footer'>
 			<div className='container footer__container'>
@@ -12,31 +16,17 @@ const Footer = () => {
 
 				<div className='footer__nav'>
 					<ul className='footer__menu'>
-						<li className='footer__menu-item'>
-							<a href='#' className='footer__menu-link'>
-								Чай
-							</a>
-						</li>
-						<li className='footer__menu-item'>
-							<a href='#' className='footer__menu-link'>
-								Кофе
-							</a>
-						</li>
-						<li className='footer__menu-item'>
-							<a href='#' className='footer__menu-link'>
-								Чайники
-							</a>
-						</li>
-						<li className='footer__menu-item'>
-							<a href='#' className='footer__menu-link'>
-								Турки
-							</a>
-						</li>
-						<li className='footer__menu-item'>
-							<a href='#' className='footer__menu-link'>
-								Прочее
-							</a>
-						</li>
+						{Object.entries(categories).map(([key, value]) => (
+							<li key={key} className='footer__menu-item'>
+								<Link
+									className='footer__menu-link'
+									to={`/products?category=${key}`}
+									// onClick={}
+								>
+									{value}
+								</Link>
+							</li>
+						))}
 					</ul>
 				</div>
 
@@ -45,13 +35,13 @@ const Footer = () => {
 					<p className='footer__description'>Проект сделан в учебных целях</p>
 					<ul className='footer__developers'>
 						<li className='footer__developer'>
-							Designer:
+							Designer:&nbsp;
 							<a href='#' className='footer__developer-link'>
 								Anastasia Ilina
 							</a>
 						</li>
 						<li className='footer__developer'>
-							Developer:
+							Developer:&nbsp;
 							<a
 								href='https://t.me/VladLesun'
 								className='footer__developer-link'
@@ -67,7 +57,7 @@ const Footer = () => {
 						CUPTIME@gmail.com
 					</a>
 					<ul className='footer__social'>
-						<li className='footer__socail-item'>
+						<li className='footer__social-item'>
 							<a href='#' className='footer__social-link'>
 								<svg
 									width='32'
@@ -80,7 +70,7 @@ const Footer = () => {
 								</svg>
 							</a>
 						</li>
-						<li className='footer__socail-item'>
+						<li className='footer__social-item'>
 							<a href='#' className='footer__social-link'>
 								<svg
 									width='32'
@@ -93,7 +83,7 @@ const Footer = () => {
 								</svg>
 							</a>
 						</li>
-						<li className='footer__socail-item'>
+						<li className='footer__social-item'>
 							<a href='#' className='footer__social-link'>
 								<svg
 									width='32'

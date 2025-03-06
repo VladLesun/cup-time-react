@@ -48,6 +48,19 @@ button {
 	padding: 0;
 	border: 1px solid transparent;
 	background-color: transparent;
+	cursor: pointer;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+	appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 .container {
@@ -56,4 +69,100 @@ button {
 	max-width: calc(var(--max-width) + var(--padding) * 2);
 	padding: 0 var(--padding);
 	margin: 0 auto;
+}
+
+.purple-title {
+	font-size: 54px;
+	line-height: 110%;
+	color: var(--purple);
+}
+
+.btn {
+	padding: 16px 10px;
+	border-radius: 4px;
+	font-size: 20px;
+	line-height: 124%;
+}
+
+.purple-btn {
+	border: 1px solid var(--purple);
+	color: var(--purple);
+}
+
+.white-btn {
+	border: 1px solid var(--white);
+	color: var(--white);
+}
+
+.quantity {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.quantity-button {
+	width: 36px;
+	height: 36px;
+	background-color: transparent;
+	background: center no-repeat;
+	border-radius: 4px;
+	border: 1px solid #b8b8b8;
+}
+
+.quantity-button_minus {
+	background-image: url('../../public/image/minus.svg');
+}
+
+.quantity-button_plus {
+	background-image: url('../../public/image/plus.svg');
+}
+
+.quantity-input {
+	width: 26px;
+	font-size: 20px;
+	text-align: center;
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+
+.ReactModal__Body--open {
+	overflow: hidden;
+}
+
+.ReactModal__Overlay {
+	background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+@media (max-width: 1240px) {
+	.container {
+		--padding: 42px;
+	}
+}
+
+@media (max-width: 940px) {
+	.purple-title {
+		font-size: 36px;
+	}
+	.btn {
+		padding: 12px 5px;
+		font-size: 16px;
+	}
+	.quantity {
+		gap: 2px;
+	}
+	.quantity-button {
+		width: 24px;
+		height: 24px;
+	}
+	.quantity-input {
+		width: 20px;
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 660px) {
+	.container {
+		--padding: 16px;
+	}
 }

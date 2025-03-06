@@ -1,48 +1,46 @@
+import { Link, useLocation } from 'react-router-dom';
+import { useProducts } from '../context/ProductContext';
+
 const Header = () => {
+	const location = useLocation();
+	const { categories } = useProducts();
+
+	const getActiveClass = category => {
+		const currentCategory = new URLSearchParams(location.search).get(
+			'category'
+		);
+
+		return currentCategory === category ? 'header__menu-link_active' : '';
+	};
 	return (
 		<header className='header'>
 			<div className='container header__container'>
-				<a href='/index.html' className='header__logo-link'>
+				<Link to='/' className='header__logo-link'>
 					<img
 						src='image/logo.svg'
 						alt='Логотип Cup Time'
 						className='header__logo'
 					/>
-				</a>
+				</Link>
 
 				<nav className='header__nav'>
 					<ul className='header__menu'>
-						<li className='header__menu-item'>
-							<a href='#' className='header__menu-link'>
-								Чай
-							</a>
-						</li>
-						<li className='header__menu-item'>
-							<a href='#' className='header__menu-link'>
-								Кофе
-							</a>
-						</li>
-						<li className='header__menu-item'>
-							<a href='#' className='header__menu-link'>
-								Чайники
-							</a>
-						</li>
-						<li className='header__menu-item'>
-							<a href='#' className='header__menu-link'>
-								Турки
-							</a>
-						</li>
-						<li className='header__menu-item'>
-							<a href='#' className='header__menu-link'>
-								Прочее
-							</a>
-						</li>
+						{Object.entries(categories).map(([key, value]) => (
+							<li key={key} className='header__menu-item'>
+								<Link
+									to={`/products?category=${key}`}
+									className={`header__menu-link ${getActiveClass(key)}`}
+								>
+									{value}
+								</Link>
+							</li>
+						))}
 					</ul>
 				</nav>
 
-				<a href='cart.html' className='header__cart-link'>
+				<Link to='cart' className='header__cart-link'>
 					6
-				</a>
+				</Link>
 			</div>
 		</header>
 	);
