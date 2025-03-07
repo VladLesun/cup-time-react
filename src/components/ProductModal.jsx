@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Modal from 'react-modal';
 import { API_URL } from '../api/api';
 
@@ -18,7 +19,21 @@ const customStyles = {
 Modal.setAppElement('#root');
 
 const ProductModal = ({ isOpen, onRequestClose, data }) => {
+	const [quantity, setQuantity] = useState(1);
+
 	if (!data) null;
+
+	const handleDecrease = () => {
+		if (quantity > 1) {
+			setQuantity(quantity - 1);
+		}
+	};
+	const handleIncrease = () => {
+		setQuantity(quantity + 1);
+	};
+	const handleAddToCart = () => {
+		// todo добавить товар в корзину
+	};
 
 	return (
 		<Modal
@@ -47,15 +62,27 @@ const ProductModal = ({ isOpen, onRequestClose, data }) => {
 				</ul>
 				<div className='modal__add'>
 					<div className='modal__quantity quantity'>
-						<button className='modal__quantity-button quantity-button modal__quantity-button_minus quantity-button_minus'></button>
+						<button
+							className='modal__quantity-button quantity-button modal__quantity-button_minus quantity-button_minus'
+							onClick={handleDecrease}
+						></button>
 						<input
 							className='modal__quantity-input quantity-input'
 							type='number'
-							value={1}
+							value={quantity}
+							readOnly
 						/>
-						<button className='modal__quantity-button quantity-button  modal__quantity-button_plus quantity-button_plus'></button>
+						<button
+							className='modal__quantity-button quantity-button  modal__quantity-button_plus quantity-button_plus'
+							onClick={handleIncrease}
+						></button>
 					</div>
-					<button className='modal__add-btn btn purple-btn'>Добавить</button>
+					<button
+						className='modal__add-btn btn purple-btn'
+						onClick={handleAddToCart}
+					>
+						Добавить
+					</button>
 				</div>
 				<button className='modal__close' onClick={onRequestClose}>
 					<svg

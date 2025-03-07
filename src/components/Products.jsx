@@ -20,7 +20,7 @@ const Products = () => {
 			<div className='container'>
 				<h2 className='products__title purple-title'>{categoryTitle}</h2>
 				<ul className='products__list'>
-					{!products.length ? (
+					{products.length ? (
 						products.map(product => <Product key={product.id} data={product} />)
 					) : (
 						<SkeletonLoader />
