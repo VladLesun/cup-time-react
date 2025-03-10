@@ -105,7 +105,7 @@
 		grid-template-columns: 1fr 300px;
 	}
 	.cart__items {
-		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
 	}
 	/*! items */
 	.cart-item__article {
@@ -129,7 +129,7 @@
 	}
 	.cart__items {
 		order: 3;
-		grid-template-columns: repeat(auto-fit, minmax(159px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(159px, 1fr));
 		grid-gap: 16px;
 	}
 	/*! items */
@@ -173,7 +173,7 @@
 		padding-top: 100px;
 	}
 	.cart__items {
-		grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
 		grid-gap: 8px;
 	}
 	/*! items */
