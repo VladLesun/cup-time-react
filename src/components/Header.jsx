@@ -15,10 +15,6 @@ const Header = () => {
 		return currentCategory === category ? 'header__menu-link_active' : '';
 	};
 
-	const totalQuantity = cart
-		? cart.reduce((acc, item) => item.quantity + acc, 0)
-		: 0;
-
 	return (
 		<header className='header'>
 			<div className='container header__container'>
@@ -46,7 +42,7 @@ const Header = () => {
 				</nav>
 
 				<Link to='cart' className='header__cart-link'>
-					{totalQuantity}
+					{cart ? cart.reduce((acc, item) => item.quantity + acc, 0) : 0}
 				</Link>
 			</div>
 		</header>

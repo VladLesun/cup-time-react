@@ -18,6 +18,11 @@
 	grid-gap: 20px;
 }
 
+.cart__items_empty {
+	display: block;
+	font-size: 40px;
+}
+
 /*! items */
 .cart-item__article {
 	height: 100%;
@@ -132,6 +137,9 @@
 		grid-template-columns: repeat(auto-fill, minmax(159px, 1fr));
 		grid-gap: 16px;
 	}
+	.cart__items_empty {
+		font-size: 32px;
+	}
 	/*! items */
 	.cart-item__article {
 		min-height: 280px;
@@ -175,6 +183,9 @@
 	.cart__items {
 		grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
 		grid-gap: 8px;
+	}
+	.cart__items_empty {
+		font-size: 24px;
 	}
 	/*! items */
 	.cart-item__article {
