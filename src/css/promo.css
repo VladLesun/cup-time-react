@@ -4,6 +4,7 @@
 }
 
 .promo__container {
+	min-height: 600px;
 	padding: 210px 0 80px;
 	background-image: url('../image/promo-1440.png');
 	background-position: right 113px bottom;
@@ -53,6 +54,7 @@
 
 @media (max-width: 660px) {
 	.promo__container {
+		min-height: 420px;
 		padding: 90px 0 250px;
 		background-position: center bottom;
 		background-size: 145px;

@@ -9,6 +9,7 @@ html {
 }
 
 body {
+	min-width: 320px;
 	font-family: var(--font-family);
 	font-weight: 400;
 	font-size: 20px;
@@ -128,10 +129,6 @@ input[type='number'] {
 
 .ReactModal__Body--open {
 	overflow: hidden;
-}
-
-.ReactModal__Overlay {
-	background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
 @media (max-width: 1240px) {

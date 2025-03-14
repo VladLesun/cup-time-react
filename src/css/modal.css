@@ -1,6 +1,7 @@
 .modal {
 	position: relative;
-	width: 744px;
+	width: 100%;
+	max-width: 744px;
 	display: grid;
 	grid-template-columns: 336px 1fr;
 	grid-template-areas:
@@ -8,7 +9,21 @@
 		'img products'
 		'img add';
 	grid-gap: 51px 24px;
+	margin: auto;
 	padding-right: 24px;
+	background-color: var(--white);
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.modal__overlay {
+	position: fixed;
+	inset: 0;
+	display: flex;
+	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+	overflow-y: auto;
+	cursor: pointer;
 }
 
 .modal__img {
@@ -76,7 +91,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: #b8b8b8;
+	color: var(--light-grey);
 }
 
 @media (max-width: 940px) {
