@@ -8,6 +8,8 @@
 	background-color: #fff;
 	padding: 20px;
 	border-radius: 6px;
+	outline: none;
+	cursor: auto;
 }
 
 .modal-cart__overlay {
@@ -32,6 +34,16 @@
 	align-items: center;
 	justify-content: center;
 	color: var(--light-grey);
+}
+
+.modal-cart__close:active {
+	color: #000;
+}
+
+@media (any-hover: hover) {
+	.modal-cart__close:hover {
+		color: #f0f0f0;
+	}
 }
 
 @media (max-width: 940px) {

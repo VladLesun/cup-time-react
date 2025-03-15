@@ -21,6 +21,7 @@
 	background-color: var(--mint);
 	color: var(--black);
 	overflow: hidden;
+	transition: transform 0.3s ease-in-out;
 }
 
 .product__image {
@@ -50,6 +51,12 @@
 .product__price {
 	font-size: 20px;
 	line-height: 124%;
+}
+
+@media (any-hover: hover) {
+	.product:hover {
+		transform: scale(1.02);
+	}
 }
 
 @media (max-width: 1240px) {

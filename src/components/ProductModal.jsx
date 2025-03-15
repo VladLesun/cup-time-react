@@ -54,6 +54,7 @@ const ProductModal = ({ isOpen, onRequestClose, data }) => {
 					<button
 						className='modal__quantity-button quantity-button modal__quantity-button_minus quantity-button_minus'
 						onClick={handleDecrease}
+						disabled={quantity === 1}
 					></button>
 					<input
 						className='modal__quantity-input quantity-input'

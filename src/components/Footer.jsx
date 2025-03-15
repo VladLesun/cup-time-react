@@ -58,7 +58,7 @@ const Footer = () => {
 					</a>
 					<ul className='footer__social'>
 						<li className='footer__social-item'>
-							<a href='#' className='footer__social-link'>
+							<a href='#' className='footer__social-link telegram'>
 								<svg
 									width='32'
 									height='32'
@@ -71,7 +71,7 @@ const Footer = () => {
 							</a>
 						</li>
 						<li className='footer__social-item'>
-							<a href='#' className='footer__social-link'>
+							<a href='#' className='footer__social-link youtube'>
 								<svg
 									width='32'
 									height='32'
@@ -84,7 +84,7 @@ const Footer = () => {
 							</a>
 						</li>
 						<li className='footer__social-item'>
-							<a href='#' className='footer__social-link'>
+							<a href='#' className='footer__social-link vk'>
 								<svg
 									width='32'
 									height='32'

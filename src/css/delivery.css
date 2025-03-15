@@ -20,6 +20,11 @@
 	outline: none;
 	background-color: var(--mint);
 	font-size: 16px;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.delivery__input:focus-visible {
+	background-color: #e4eeeb;
 }
 
 .delivery__input::placeholder {
@@ -49,10 +54,17 @@
 .delivery__payment-label {
 	max-width: fit-content;
 	font-size: 16px;
+	cursor: pointer;
 }
 
 .delivery__radio {
 	margin-right: 8px;
+}
+
+@media (any-hover: hover) {
+	.delivery__input:hover {
+		background-color: #e4eeeb;
+	}
 }
 
 @media (max-width: 1240px) {
