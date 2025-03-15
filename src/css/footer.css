@@ -55,6 +55,46 @@
 	gap: 15px;
 }
 
+.footer__menu-link,
+.footer__developer-link,
+.footer__email,
+.footer__social-link {
+	transition: color 0.3s ease-in-out;
+}
+
+@media (any-hover: hover) {
+	.footer__menu-link:hover,
+	.footer__developer-link:hover,
+	.footer__email:hover {
+		color: #7308b5;
+	}
+	.telegram:hover,
+	.telegram:focus-visible {
+		color: #27a7e7;
+	}
+	.youtube:hover,
+	.youtube:focus-visible {
+		color: #c4302b;
+	}
+	.vk:hover,
+	.vk:focus-visible {
+		color: #4d7198;
+	}
+
+	.footer__menu-link:focus-visible,
+	.footer__developer-link:focus-visible,
+	.footer__email:focus-visible {
+		color: #64099b;
+	}
+}
+
+.footer__menu-link:active,
+.footer__developer-link:active,
+.footer__email:active,
+.footer__social-link:active {
+	color: #fafad2;
+}
+
 @media (max-width: 1240px) {
 	.footer__menu {
 		gap: 32px;

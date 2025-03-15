@@ -13,7 +13,9 @@
 	padding-right: 24px;
 	background-color: var(--white);
 	border-radius: 6px;
+	outline: none;
 	overflow: hidden;
+	cursor: auto;
 }
 
 .modal__overlay {
@@ -92,6 +94,17 @@
 	align-items: center;
 	justify-content: center;
 	color: var(--light-grey);
+	transition: color 0.3s ease-in-out;
+}
+
+.modal__close:active {
+	color: #000;
+}
+
+@media (any-hover: hover) {
+	.modal__close:hover {
+		color: #f0f0f0;
+	}
 }
 
 @media (max-width: 940px) {

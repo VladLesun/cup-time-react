@@ -49,6 +49,7 @@
 	color: var(--black);
 	font-size: 12px;
 	text-align: center;
+	transition: transform 0.3s ease-in-out;
 }
 
 .header__control {
@@ -57,12 +58,31 @@
 	gap: 16px;
 }
 
-.header__close-btn {
-	display: none;
-}
-
+.header__close-btn,
 .header__burger {
 	display: none;
+	color: var(--light-grey);
+	transition: color 0.3s ease-in-out;
+}
+
+.header__menu-link:active,
+.header__close-btn:active,
+.header__burger:active {
+	color: var(--purple);
+}
+
+@media (any-hover: hover) {
+	.header__menu-link:hover.header__menu-link_active {
+		color: var(--purple);
+	}
+	.header__menu-link:hover,
+	.header__close-btn:hover,
+	.header__burger:hover {
+		color: #f0f0f0;
+	}
+	.header__cart-link:hover {
+		transform: rotateY(360deg);
+	}
 }
 
 @media (max-width: 1240px) {
