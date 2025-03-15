@@ -2,7 +2,6 @@ import { useDelivery } from '../context/DeliveryContext';
 
 const Delivery = () => {
 	const { deliveryDetails, updateDeliveryDetails } = useDelivery();
-	
 
 	const handleChange = e => {
 		const { name, value } = e.target;
@@ -42,9 +41,9 @@ const Delivery = () => {
 
 					<fieldset className='delivery__payment'>
 						<legend className='delivery__payment-title'>Оплата:</legend>
-						<label className='delivery__payment-label'>
+						<label className='delivery__payment-label radio'>
 							<input
-								className='delivery__radio'
+								className='delivery__radio radio__input'
 								type='radio'
 								name='payment'
 								value='card'
@@ -53,9 +52,9 @@ const Delivery = () => {
 							/>
 							Картой
 						</label>
-						<label className='delivery__payment-label'>
+						<label className='delivery__payment-label radio'>
 							<input
-								className='delivery__radio'
+								className='delivery__radio radio__input'
 								type='radio'
 								name='payment'
 								value='cash'

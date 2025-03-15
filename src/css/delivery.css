@@ -54,11 +54,6 @@
 .delivery__payment-label {
 	max-width: fit-content;
 	font-size: 16px;
-	cursor: pointer;
-}
-
-.delivery__radio {
-	margin-right: 8px;
 }
 
 @media (any-hover: hover) {
